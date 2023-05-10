@@ -1,0 +1,22 @@
+<!--College page inherits from base page and accepts information about the college such as class size and SAT along with a list of its top 3 post objects given as the list posts-->
+{% extends "base.html" %}
+
+{% block title %}
+<h2 class="my-colleges-header">{{college.name}}</h2>
+<p>Class Size: {{college.class_size}}</p>
+<p>Average SAT: {{college.average_sat}}</p>
+{% endblock %}
+
+{%block content %}
+<!--Iterates through each post in the list to display each individual post along with its information-->
+	{%for post in posts %}
+		<div class="row">
+			<div class="col-md-10 offset-md-1 my-college-panel">
+				<h3>{{post.post_college}}</h3> 
+				<p>{{post.post_username}}</p>
+				<p>{{post}}</p>
+				<p>{{post.content}}</p>
+			</div>
+		</div>
+    {% endfor %}
+{%endblock%}

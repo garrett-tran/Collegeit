@@ -1,0 +1,31 @@
+body {
+    font-size: 22px;
+    font-family: 'Open Sans';font-size: 22px;
+}
+
+.my-colleges-header {
+	margin-top: 50px;
+}
+
+.my-college-panel {
+	background-color: #154C79;
+	color: white;
+	padding: 30px;
+	margin-top: 30px;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #154C79;
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Archivo';
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-family: 'Archivo';
+}

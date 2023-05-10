@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collegeit - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/home.css')}}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg">
+		<a class="navbar-brand" href="/home">Collegeit</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="/home">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/mycolleges">My Colleges</a>
+			</li>
+		  </ul>
+		  <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			  <a href="/logout" class="btn btn-outline-success" role="button" aria-disabled="true">Log Out</a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+	<div class="container-fluid">
+		<h2 class="explore-header">Explore</h2>
+		<div class="row">
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/harvard.png')}}" alt="panel-1" class="img-fluid">
+					</div>
+					<a href="/college/Harvard" class="btn panel-button" role="button" aria-disabled="true">Harvard</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/princeton.png')}}" alt="panel-2" class="img-fluid">
+					</div>
+					<a href="/college/Princeton" class="btn panel-button" role="button" aria-disabled="true">Princeton</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/berkeley.png')}}" alt="panel-3" class="img-fluid">
+					</div>
+					<a href="/college/Berkeley" class="btn panel-button" role="button" aria-disabled="true">Berkeley</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/stanford.png')}}" alt="panel-4" class="img-fluid">
+					</div>
+					<a href="/college/Stanford" class="btn panel-button" role="button" aria-disabled="true">Stanford</a>
+				</div>
+		</div>
+		<div class="row">
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/ucla.png')}}" alt="panel-5" class="img-fluid">
+					</div>
+					<a href="/college/UCLA" class="btn panel-button" role="button" aria-disabled="true">UCLA</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/duke.png')}}" alt="panel-6" class="img-fluid">
+					</div>
+					<a href="/college/Duke" class="btn panel-button" role="button" aria-disabled="true">Duke</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/calpoly.png')}}" alt="panel-7" class="img-fluid">
+					</div>
+					<a href="/college/CalPoly" class="btn panel-button" role="button" aria-disabled="true">CalPoly</a>
+				</div>
+				<div class="col-md-3">
+					<div class="image-container">
+						<img src="{{url_for('static', filename='images/umich.png')}}" alt="panel-8" class="img-fluid">
+					</div>
+					<a href="/college/UMICH" class="btn panel-button" role="button" aria-disabled="true">UMICH</a>
+				</div>
+        </div>
+    </div>
+	
+</body>
+					

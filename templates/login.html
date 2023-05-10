@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collegeit Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/login.css')}}">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 offset-md-4 form-div">
+				<h1 class="text-center title">Collegeit</h1>
+				<form action="#" method="POST">
+					<h3 class="text-center login-title">Login</h3>
+
+					<!-- display validation errors here -->
+					<?php include('errors.php'); ?>
+					<div class="form-group">	
+						<label for="username">Username</label>
+						<input type="text" name="username" class="form-control form-control-lg">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control form-control-lg">
+					</div>`
+					<div class="form-group">
+						<button type="submit" name="login-btn" class="btn btn-primary btn-block btn-lg">Login</button>
+					</div>
+
+					<p class="text-center not-member-link">Not yet a member? <a href="http://127.0.0.1:5001/signup">Sign up</a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="image-overlay"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

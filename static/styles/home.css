@@ -1,0 +1,63 @@
+/* CSS for Home page */
+
+body {
+    font-size: 22px;
+    font-family: 'Open Sans';font-size: 22px;
+}
+
+.navbar {
+    background-color: #154C79;
+    color: white;
+    font-family: 'Archivo';
+}
+
+.logout{
+   display: flex;
+   justify-content: right;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Archivo';
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.explore-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Archivo';
+    font-size: 50px;
+}
+
+.image-container {
+    padding: 20px;
+}
+
+.panel-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.col-md-3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+.panel-button
+{
+    background-color: #78CDE3 !important;
+    text-align: center;
+}
+

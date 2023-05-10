@@ -1,0 +1,20 @@
+<!--Takes in a list of posts to display the top three posts from a list of posts that are about a college that the user follows-->
+{% extends "base.html" %}
+
+{% block title %}
+<h2 class="my-colleges-header">My Colleges</h2>
+{% endblock %}
+
+{%block content %}
+<!--Iterates through each post in the list to display each individual post along with its information-->
+	{%for post in posts %}
+		<div class="row">
+			<div class="col-md-10 offset-md-1 my-college-panel">
+				<h3>{{post.post_college}}</h3> 
+				<p>{{post.post_username}}</p>
+				<p>{{post}}</p>
+				<p>{{post.content}}</p>
+			</div>
+		</div>
+    {% endfor %}
+{%endblock%}
