@@ -14,7 +14,7 @@ app.secret_key = "Hello"
 # TODO: Fill in methods and routes
 init_db()
 #Login method that checks if username and password match an entry in the users database
-@app.route("/login", methods=("GET", "POST"))
+@app.route("/", methods=("GET", "POST"))
 def login():
     if request.method == "GET":
         return render_template("login.html")
@@ -63,6 +63,8 @@ def mycolleges():
                 db_session.add(new_posttag)
                 db_session.commit()
             return redirect(url_for("mycolleges"))
+        else:
+            return redirect(url_for("mycolleges"))
                     
 
 #This page works exactly the same as mycolleges except posts are sorted by each inidividual college which is determined by which college's url is put in
@@ -98,6 +100,8 @@ def college(name):
                 db_session.add(new_posttag)
                 db_session.commit()
             return redirect(url_for("college", name=name))
+        else:
+            return redirect(url_for("mycolleges"))
         
 
 @app.route("/home")
@@ -126,19 +130,19 @@ def signup():
         interests = interests.split()
         check = db_session.query(User).where(User.username == uname).first()
         #Checks to see if username is unique and passwords match before creating a new user entry in the users database
-        while True:
-            if check == None:
-                if pw == confirm_pw:
-                    user = User(username = uname, password = pw)
-                    db_session.add(user)
-                    for college in interests:
-                        if(db_session.query(College).where(college == College.name).first() is not None):
-                            following = CollegesFollowed(user_username = uname, college_name = college)
-                            db_session.add(following)
-                        db_session.commit()
-                        #logs the user in and sends them to the home page
-                session["username"] = uname
-                return redirect(url_for("home"))
+        if check == None and pw == confirm_pw and uname != "" and pw != "":
+            user = User(username = uname, password = pw)
+            db_session.add(user)
+            for college in interests:
+                if(db_session.query(College).where(college == College.name).first() is not None):
+                    following = CollegesFollowed(user_username = uname, college_name = college)
+                    db_session.add(following)
+                db_session.commit()
+            #logs the user in and sends them to the home page
+            session["username"] = uname
+            return redirect(url_for("home"))
+        else:
+            return redirect(url_for("signup"))
 
 
 
@@ -149,4 +153,4 @@ def signup():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(host="172.16.7.167", port=5001)
